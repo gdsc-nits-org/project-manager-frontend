@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .jsx --ext .js --fix",
+    "lint": "eslint . --ext .jsx --ext .js --fix --max-warnings=0",
     "pretty": "prettier --write .",
     "precommit": "lint-staged",
     "preinstall": "npx only-allow pnpm",
