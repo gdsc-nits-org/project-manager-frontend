@@ -5,17 +5,17 @@
 // export default Navbar;
 
 import React from "react";
-import styles from "./Navbar.module.scss";
 import { RxDashboard } from "react-icons/rx";
 import { GiBackwardTime } from "react-icons/gi";
 import { CiFolderOn } from "react-icons/ci";
-import { GoPlus } from "react-icons/go";
-import { GoProjectRoadmap } from "react-icons/go";
+import { GoPlus , GoProjectRoadmap } from "react-icons/go";
+
+import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   return (
     <>
-      {/**navbbar */}
+      {/** navbbar */}
       <div className={styles.Navbar}>Navbar</div>
 
       
@@ -27,13 +27,13 @@ const Navbar = () => {
 
           <div className={styles.dropdown}>
             <ul>
-              <li><a href="#"> < GoProjectRoadmap />Overview</a></li>
-              <li><a href="#"><GiBackwardTime/>Recent viewed</a></li>
+              <li><a href=""> < GoProjectRoadmap />Overview</a></li>
+              <li><a href=""><GiBackwardTime/>Recent viewed</a></li>
             </ul>
           </div>
         </div>
 
-        {/**frame2 */}
+        {/** frame2 */}
         {/* <div className={styles.frame2}>
           <div className={styles.workspace}>
             <CiFolderOn />
