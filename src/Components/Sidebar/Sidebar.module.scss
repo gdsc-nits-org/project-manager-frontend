@@ -1,0 +1,54 @@
+.wrapper {
+  position: fixed;
+  min-height: 100vh;
+  margin-top: var(--navbar-height);
+  border-right: 0.5px solid rgba(115, 100, 255, 0.5);
+  padding: 26px, 0px, 26px, 0px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .dashboard {
+    margin-top: 8%;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    padding: 10px 25px;
+    cursor: pointer;
+
+    h1 {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hidden {
+      display: none !important;
+      transform: translateY(-110%) !important;
+      transition: all 1s ease-in-out;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 20px;
+      transition: all 1s ease-in-out;
+      overflow: hidden;
+
+      .it {
+        transition: all 1s ease-in-out;
+      }
+
+      h3 {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+}
