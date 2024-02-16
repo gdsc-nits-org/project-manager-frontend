@@ -18,11 +18,18 @@
     padding: 10px 25px;
     cursor: pointer;
 
-    h1 {
+    button {
       display: flex;
       gap: 10px;
       justify-content: center;
       align-items: center;
+      font-size: 1.7vw;
+
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline: inherit;
     }
 
     .hidden {

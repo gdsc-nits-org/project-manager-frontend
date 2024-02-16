@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { RxDashboard } from "react-icons/rx";
 import { GrOverview } from "react-icons/gr";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -9,34 +9,14 @@ import { RiCheckboxIndeterminateLine } from "react-icons/ri";
 import styles from "./Sidebar.module.scss";
 
 const Sidebar = () => {
-  const dashboardItems = useRef();
-  const workspaceItems = useRef();
-
   const [isDashHid, setisDashHid] = useState(true);
   const [isWorkHid, setisWorkHid] = useState(true);
 
-  useEffect(() => {
-    if (isDashHid) {
-      dashboardItems.current.classList.add(styles.hidden);
-    } else {
-      dashboardItems.current.classList.remove(styles.hidden);
-    }
-  }, [isDashHid]);
-
-  useEffect(() => {
-    if (isWorkHid) {
-      workspaceItems.current.classList.add(styles.hidden);
-    } else {
-      workspaceItems.current.classList.remove(styles.hidden);
-    }
-  }, [isWorkHid]);
 
   return (
     <div className={styles.wrapper}>
       <div className={`${styles.dashboard} ${styles.container}`}>
-        <h1
-          role="button"
-          tabIndex={0}
+        <button
           style={{ color: `${isDashHid ? "black" : "rgba(115, 100, 255, 1)"}` }}
           onClick={() => {
             setisDashHid(!isDashHid);
@@ -46,9 +26,9 @@ const Sidebar = () => {
           <RxDashboard />
           Dashboard
           {isDashHid ? <MdKeyboardArrowDown /> : <IoIosArrowUp />}
-        </h1>
+        </button>
         <div className={styles.items}>
-          <div className={styles.it} ref={dashboardItems}>
+          <div className={`${isDashHid ? styles.it : styles.hidden}`}>
             <h3>
               <RiCheckboxIndeterminateLine />
               Overview
@@ -61,7 +41,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className={`${styles.workspace} ${styles.container}`}>
-        <h1
+        <button
           role="button"
           tabIndex={0}
           style={{ color: `${isWorkHid ? "black" : "rgba(115, 100, 255, 1)"}` }}
@@ -73,10 +53,10 @@ const Sidebar = () => {
           <FaRegFolder />
           Workspace
           {isWorkHid ? <MdKeyboardArrowDown /> : <IoIosArrowUp />}
-        </h1>
+        </button>
 
         <div className={styles.items}>
-          <div ref={workspaceItems} className={styles.it}>
+          <div className={`${isWorkHid ? styles.it : styles.hidden}`}>
             <h3>
               <GrOverview />
               Project1
