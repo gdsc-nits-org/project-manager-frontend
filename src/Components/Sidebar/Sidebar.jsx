@@ -28,7 +28,7 @@ const Sidebar = () => {
           {isDashHid ? <MdKeyboardArrowDown /> : <IoIosArrowUp />}
         </button>
         <div className={styles.items}>
-          <div className={`${isDashHid ? styles.it : styles.hidden}`}>
+          <div className={`${styles.it} ${isDashHid && styles.hidden}`}>
             <h3>
               <RiCheckboxIndeterminateLine />
               Overview
@@ -56,7 +56,7 @@ const Sidebar = () => {
         </button>
 
         <div className={styles.items}>
-          <div className={`${isWorkHid ? styles.it : styles.hidden}`}>
+          <div className={`${styles.it} ${isWorkHid && styles.hidden}`}>
             <h3>
               <GrOverview />
               Project1

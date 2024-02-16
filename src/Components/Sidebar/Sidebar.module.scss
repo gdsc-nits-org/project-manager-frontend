@@ -2,9 +2,9 @@
   position: fixed;
   min-height: 100vh;
   margin-top: var(--navbar-height);
-  border-right: 0.5px solid rgba(115, 100, 255, 0.5);
-  padding: 26px, 0px, 26px, 0px;
-  gap: 10px;
+  border-right: 0.125rem solid rgba(115, 100, 255, 0.5);
+  padding: 1.625rem, 0rem, 1.625rem, 0rem;
+  gap: .625rem;
   display: flex;
   flex-direction: column;
 
@@ -15,12 +15,12 @@
   .container {
     position: relative;
     width: 100%;
-    padding: 10px 25px;
+    padding: .625rem 1.5625rem;
     cursor: pointer;
 
     button {
       display: flex;
-      gap: 10px;
+      gap: .625rem;
       justify-content: center;
       align-items: center;
       font-size: 1.7vw;
@@ -30,6 +30,11 @@
       padding: 0;
       cursor: pointer;
       outline: inherit;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2.9vw;
+      }
+      
     }
 
     .hidden {
@@ -41,8 +46,8 @@
     .items {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 10px 20px;
+      gap: .625rem;
+      padding: .625rem 1.25rem;
       transition: all 1s ease-in-out;
       overflow: hidden;
 
@@ -52,10 +57,17 @@
 
       h3 {
         display: flex;
-        gap: 10px;
+        gap: .625rem;
         justify-content: flex-start;
         align-items: center;
+        font-size: 1.2vw;
+
+        @media screen and (max-width: 768px) {
+          font-size: 2.4vw;
+        }
       }
     }
   }
 }
+
+
