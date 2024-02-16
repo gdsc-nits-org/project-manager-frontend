@@ -42,8 +42,6 @@ const Sidebar = () => {
       </div>
       <div className={`${styles.workspace} ${styles.container}`}>
         <button
-          role="button"
-          tabIndex={0}
           style={{ color: `${isWorkHid ? "black" : "rgba(115, 100, 255, 1)"}` }}
           onClick={() => {
             setisWorkHid(!isWorkHid);
